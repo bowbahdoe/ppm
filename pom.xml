@@ -6,7 +6,7 @@
 
     <groupId>dev.mccue</groupId>
     <artifactId>ppm</artifactId>
-    <version>2024.10.13</version>
+    <version>2025.01.17</version>
     <packaging>jar</packaging>
 
     <properties>

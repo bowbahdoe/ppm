@@ -4,6 +4,14 @@ Utility for writing out image data in the PPM format.
 
 ## Usage
 
+```xml 
+<dependency>
+    <groupId>dev.mccue</groupId>
+    <artifactId>ppm</artifactId>
+    <version>2025.01.17</version>
+</dependency>
+```
+
 ```java
 import dev.mccue.color.RGB255;
 

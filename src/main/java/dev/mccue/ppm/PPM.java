@@ -55,15 +55,15 @@ public final class PPM {
     public void write(OutputStream os, PPMFormat format) throws IOException {
         switch (format) {
             case PLAIN -> {
-                os.write(("P3\n" + width() + " " + height() + "\n255\n").getBytes(StandardCharsets.UTF_8));
+                os.write(("P3\n" + width() + " " + height() + "\n255\n").getBytes(StandardCharsets.US_ASCII));
                 for (RGB255[] row : pixels) {
                     for (RGB255 pixel : row) {
-                        os.write((pixel.R() + " " + pixel.G() + " " + pixel.B() + "\n").getBytes(StandardCharsets.UTF_8));
+                        os.write((pixel.R() + " " + pixel.G() + " " + pixel.B() + "\n").getBytes(StandardCharsets.US_ASCII));
                     }
                 }
             }
             case RAW -> {
-                os.write(("P6\n" + width() + " " + height() + "\n255\n").getBytes(StandardCharsets.UTF_8));
+                os.write(("P6\n" + width() + " " + height() + "\n255\n").getBytes(StandardCharsets.US_ASCII));
                 for (RGB255[] row : pixels) {
                     for (RGB255 pixel : row) {
                         os.write((byte) pixel.R());
